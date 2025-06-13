@@ -204,7 +204,7 @@ section p {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #444;
+    color: #2c2c2c;
     font-weight: 300;
 }
 
@@ -252,16 +252,20 @@ section p {
 .contact-info {
     font-size: 1.1rem;
     margin-top: 2rem;
-    color: #444;
+    color: #2c2c2c;
     font-family: 'Source Sans Pro', sans-serif;
+    background: #fafafa;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
 }
 
 .contact-info a {
-    color: #2c2c2c;
+    color: #1a1a1a;
     text-decoration: none;
     border-bottom: 2px solid #c9a96e;
     transition: all 0.3s ease;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .contact-info a:hover {
@@ -277,6 +281,56 @@ footer {
     margin-top: 4rem;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
+}
+
+/* Contact section specific styling for better visibility */
+#contact {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 2px solid #e9ecef;
+}
+
+#contact h2 {
+    color: #1a1a1a;
+}
+
+#contact p {
+    color: #2c2c2c;
+    font-weight: 400;
+}
+
+/* Booking section with dark background - override text color */
+.booking-section,
+.booking-section *,
+#contact .booking-section,
+#contact .booking-section *,
+#contact div[style*="background: linear-gradient"],
+#contact div[style*="background: linear-gradient"] * {
+    color: #ffffff !important;
+}
+
+.booking-section p,
+#contact .booking-section p,
+#contact div[style*="background: linear-gradient"] p {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+}
+
+.booking-section strong,
+#contact .booking-section strong,
+#contact div[style*="background: linear-gradient"] strong {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+.booking-section h3,
+#contact .booking-section h3 {
+    color: #c9a96e !important;
+}
+
+#contact strong {
+    color: #1a1a1a;
+    font-weight: 600;
 }
 
 /* Responsive Design */
