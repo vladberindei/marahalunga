@@ -5,76 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mara Halunga - Site Oficial</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="language-selector">
-            <a href="index.html" class="lang-btn">EN</a>
-            <a href="index-ro.html" class="lang-btn">RO</a>
-            <a href="index-pt.html" class="lang-btn active">PT</a>
+        <div class="header-container">
+            <a href="index-pt.html" class="logo">Mara Halunga</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#music">Música</a></li>
+                    <li><a href="#performances">Shows</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <a href="index.html" class="lang-btn">EN</a>
+                <a href="index-ro.html" class="lang-btn">RO</a>
+                <a href="index-pt.html" class="lang-btn active">PT</a>
+            </div>
         </div>
-        <h1>Mara Halunga</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#about">Biografia</a></li>
-                <li><a href="#music">Discografia</a></li>
-                <li><a href="#performances">Shows</a></li>
-                <li><a href="#press">Imprensa</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
     </header>
+    
     <main>
         <section class="hero" id="home">
             <div class="hero-content">
-                <h2>Mara Halunga</h2>
-                <p>Cantora e compositora romena com uma carreira internacional notável, especializada em jazz contemporâneo, bossa nova e world music. Ativa na Romênia e no Brasil, Mara traz uma perspectiva única através da fusão das tradições musicais romenas com os ritmos sul-americanos.</p>
+                <h1>Mara Halunga</h1>
+                <p class="subtitle">Cantora romena-brasileira conectando continentes através do jazz, bossa nova e world music</p>
+                <a href="#music" class="cta-button">Descobrir Música</a>
             </div>
         </section>
+
         <section id="about">
-            <h2>Biografia</h2>
-            <div style="display: flex; gap: 2rem; align-items: start; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 300px;">
-                    <p><strong>Mara Halunga</strong> é uma cantora, compositora e professora de canto romena-brasileira, cuja jornada artística conecta dois continentes e tradições musicais. Nascida em Bucareste, Romênia, a conexão de Mara com o Brasil começou através de histórias da infância contadas por seu avô, que trabalhou na construção da Embaixada Romena em Brasília.</p>
-                    
-                    <p>Em 2013, um encontro decisivo com o guitarrista <strong>Cauê De Marinis</strong> em São Paulo marcou o início de sua imersão na cultura musical brasileira. Ela começou a se apresentar ao vivo com música brasileira, participando de tradicionais "rodas de samba" e sessões de jazz pela cidade.</p>
-                    
-                    <p>Desde 2018, Mara co-lidera o projeto <strong>"Mara Halunga & Cauê De Marinis"</strong>, levando a música brasileira para palcos internacionais na Romênia, Itália, Suécia e Brasil. Sua visão artística única combina sensibilidades musicais romenas com ritmos brasileiros autênticos, criando um som distintivo que ressoa com audiências internacionais.</p>
-                    
-                    <h3 style="color: #c9a96e; margin-top: 2rem; margin-bottom: 1rem;">Destaques da Carreira</h3>
-                    <ul class="achievements">
-                        <li><strong>2013:</strong> Estreia internacional apresentando música brasileira ao vivo em São Paulo</li>
-                        <li><strong>2018:</strong> Co-fundou o projeto "Mara Halunga & Cauê De Marinis"</li>
-                        <li><strong>2024:</strong> Lançou o álbum de estreia <em>"Vento Leste"</em> pela gravadora brasileira Umbilical</li>
-                        <li><strong>Apresentações Internacionais:</strong> Romênia, Itália, Suécia e Brasil</li>
-                        <li><strong>Cobertura da Mídia:</strong> Destaque na RFI România e várias publicações musicais</li>
-                        <li><strong>Educação:</strong> Ativa como professora de canto e educadora musical</li>
-                    </ul>
-                </div>
-                <div style="flex: 0 0 300px; min-width: 250px;">
-                    <img src="assets/mara_banner_2.jpg" alt="Mara Halunga" style="width: 100%; border-radius: 15px; box-shadow: 0 8px 24px rgba(139,69,19,0.2); object-fit: cover; height: 400px;">
-                    <div style="margin-top: 1.5rem; padding: 1.5rem; background: #f8f8f8; border-radius: 10px;">
-                        <h4 style="margin-top: 0; color: #2c2c2c;">Kit de Imprensa</h4>
-                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Baixe materiais profissionais</p>
-                        <a href="assets/EPK_Mara_Halunga_Eng.pdf" target="_blank" style="display: inline-block; padding: 0.7rem 1.5rem; background: #c9a96e; color: white; text-decoration: none; border-radius: 5px; font-weight: 500;">Baixar EPK (PDF)</a>
-                    </div>
-                </div>
+            <div class="about-text">
+                <h2>Sobre</h2>
+                <p><strong>Mara Halunga</strong> é uma cantora, compositora e professora de canto romena-brasileira, cuja jornada artística conecta dois continentes e tradições musicais. Nascida em Bucareste, Romênia, a conexão de Mara com o Brasil começou através de histórias da infância contadas por seu avô, que trabalhou na construção da Embaixada Romena em Brasília.</p>
+                
+                <p>Em 2013, um encontro decisivo com o guitarrista <strong>Cauê De Marinis</strong> em São Paulo marcou o início de sua imersão na cultura musical brasileira. Ela começou a se apresentar ao vivo com música brasileira, participando de tradicionais "rodas de samba" e sessões de jazz pela cidade.</p>
+                
+                <p>Desde 2018, Mara co-lidera o projeto <strong>"Mara Halunga & Cauê De Marinis"</strong>, levando a música brasileira para palcos internacionais na Romênia, Itália, Suécia e Brasil. Sua visão artística única combina sensibilidades musicais romenas com ritmos brasileiros autênticos, criando um som distintivo que ressoa com audiências internacionais.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/mara_banner_2.jpg" alt="Mara Halunga">
             </div>
         </section>
+
         <section id="music">
-            <h2>Discografia</h2>
+            <h2>Música</h2>
             
-            <div style="background: #f8f8f8; padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
-                <h3 style="color: #2c2c2c; margin-top: 0;">Vento Leste (2024)</h3>
-                <p><em>Álbum de Estreia • Umbilical Records (Brasil)</em></p>
+            <div class="album-card">
+                <h3 class="album-title">Vento Leste</h3>
+                <p><em>Álbum de Estreia • 2024 • Umbilical Records (Brasil)</em></p>
                 <p>O álbum de estreia de Mara Halunga <strong>"Vento Leste"</strong> representa uma culminação de sua jornada artística entre a Romênia e o Brasil. Cantado principalmente em português com influências romenas sutis, o álbum apresenta sua mistura única de jazz, bossa nova e world music.</p>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                    <div>
-                        <h4 style="color: #c9a96e; margin-bottom: 1rem;">Lista de Faixas</h4>
-                        <ol style="line-height: 1.8; font-family: 'Source Sans Pro', sans-serif;">
+                <div class="album-info">
+                    <div class="track-list">
+                        <h4>Lista de Faixas</h4>
+                        <ol>
                             <li>Salto Inconsequente</li>
                             <li>Mulher do Mar</li>
                             <li>Zona Livre</li>
@@ -85,33 +73,23 @@
                             <li>A Gente Se Encontra no Final</li>
                         </ol>
                     </div>
-                    <div>
-                        <h4 style="color: #c9a96e; margin-bottom: 1rem;">Ouça Agora</h4>
-                        <p>Disponível em todas as principais plataformas de streaming:</p>
-                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                            <a href="#" style="color: #2c2c2c; text-decoration: none; padding: 0.5rem; border: 1px solid #c9a96e; border-radius: 5px; text-align: center;">🎵 Spotify</a>
-                            <a href="#" style="color: #2c2c2c; text-decoration: none; padding: 0.5rem; border: 1px solid #c9a96e; border-radius: 5px; text-align: center;">🎵 Apple Music</a>
-                            <a href="#" style="color: #2c2c2c; text-decoration: none; padding: 0.5rem; border: 1px solid #c9a96e; border-radius: 5px; text-align: center;">🎵 Bandcamp</a>
-                        </div>
+                    <div class="streaming-links">
+                        <h4>Ouça Agora</h4>
+                        <a href="#" class="stream-btn">🎵 Spotify</a>
+                        <a href="#" class="stream-btn">🎵 Apple Music</a>
+                        <a href="#" class="stream-btn">🎵 Bandcamp</a>
+                        <a href="#" class="stream-btn">🎵 YouTube Music</a>
                     </div>
                 </div>
             </div>
-            
-            <h3 style="color: #c9a96e;">Lançamentos Anteriores</h3>
-            <ul class="achievements">
-                <li><strong>"A Gente Se Encontra No Final"</strong> (2023) - Single</li>
-                <li><strong>"Salto Inconsequente"</strong> (2023) - Single</li>
-            </ul>
-            
-            <h3 style="color: #c9a96e; margin-top: 2rem;">Repertório ao Vivo</h3>
-            <p>Além das composições originais, as apresentações ao vivo de Mara incluem standards de jazz brasileiro cuidadosamente selecionados e peças improvisacionais, incluindo clássicos como "O Pato", "Magdalena" e "Irasema", junto com improvisações de samba e jazz.</p>
         </section>
+
         <section id="performances">
             <h2>Apresentações ao Vivo</h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                <div style="background: #f8f8f8; padding: 2rem; border-radius: 15px;">
-                    <h3 style="color: #c9a96e; margin-top: 0;">Participações em Festivais</h3>
+            <div class="performance-grid">
+                <div class="performance-card">
+                    <h3>Participações em Festivais</h3>
                     <ul class="achievements">
                         <li>Gărâna Jazz Festival (Romênia)</li>
                         <li>Bucharest Jazz Festival (Romênia)</li>
@@ -120,8 +98,8 @@
                     </ul>
                 </div>
                 
-                <div style="background: #f8f8f8; padding: 2rem; border-radius: 15px;">
-                    <h3 style="color: #c9a96e; margin-top: 0;">Locais Regulares</h3>
+                <div class="performance-card">
+                    <h3>Locais Regulares</h3>
                     <ul class="achievements">
                         <li>Rodas de Samba (São Paulo)</li>
                         <li>Clubes de Jazz (Romênia e Brasil)</li>
@@ -131,67 +109,28 @@
                 </div>
             </div>
             
-            <div class="booking-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%); color: white; padding: 2rem; border-radius: 15px; text-align: center; border: 2px solid #c9a96e;">
-                <h3 style="margin-top: 0; color: #c9a96e;">Contrate Mara Halunga</h3>
-                <p style="color: white; font-weight: 500;">Disponível para shows, festivais, eventos privados e intercâmbios culturais</p>
-                <p style="color: white; font-weight: 500;"><strong style="color: white;">Tipos de Apresentação:</strong> Sets acústicos solo • Apresentações com banda completa • Ensemble de jazz • Eventos culturais</p>
+            <div class="booking-section">
+                <h3>Contrate Mara Halunga</h3>
+                <p>Disponível para shows, festivais, eventos privados e intercâmbios culturais</p>
+                <p><strong>Tipos de Apresentação:</strong> Sets acústicos solo • Apresentações com banda completa • Ensemble de jazz • Eventos culturais</p>
             </div>
         </section>
-        
-        <section id="press">
-            <h2>Imprensa e Reconhecimento</h2>
-            
-            <div style="background: #f8f8f8; padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
-                <h3 style="color: #c9a96e; margin-top: 0;">Cobertura da Mídia</h3>
-                <ul class="achievements">
-                    <li><strong>RFI România</strong> - Entrevistas com a artista e segmentos musicais</li>
-                    <li><strong>Publicações Musicais Brasileiras</strong> - Resenhas de álbuns e perfis de artistas</li>
-                    <li><strong>Mídia Cultural Romena</strong> - Recursos sobre carreira internacional</li>
-                    <li><strong>Revistas de Jazz</strong> - Cobertura de festivais e resenhas de apresentações</li>
-                </ul>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div>
-                    <h3 style="color: #c9a96e;">Aclamação da Crítica</h3>
-                    <blockquote style="font-style: italic; border-left: 3px solid #c9a96e; padding-left: 1rem; margin: 1rem 0;">
-                        "Mara Halunga traz uma perspectiva única à música brasileira, combinando ritmos autênticos de samba com sua herança musical romena."
-                    </blockquote>
-                </div>
-                
-                <div>
-                    <h3 style="color: #c9a96e;">Reconhecimento</h3>
-                    <ul class="achievements">
-                        <li>Artista Internacional em Ascensão</li>
-                        <li>Embaixadora Cultural (Romênia-Brasil)</li>
-                        <li>Excelência Vocal no Jazz</li>
-                        <li>Inovação em World Music</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+
         <section id="contact">
             <h2>Contato e Contratação</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div class="contact-info">
-                    <h3 style="color: #c9a96e; margin-top: 0;">Consultas Profissionais</h3>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Consultas Profissionais</h3>
                     <p><strong>Contratações e Assessoria:</strong><br>
                     <a href="mailto:contact@marahalunga.com">contact@marahalunga.com</a></p>
                     
                     <p><strong>Imprensa e Mídia:</strong><br>
                     <a href="mailto:press@marahalunga.com">press@marahalunga.com</a></p>
-                    
-                    <p><strong>Tipos de Apresentação:</strong><br>
-                    • Shows e Festivais<br>
-                    • Eventos Privados<br>
-                    • Intercâmbios Culturais<br>
-                    • Workshops Educacionais</p>
                 </div>
                 
-                <div class="contact-info">
-                    <h3 style="color: #c9a96e; margin-top: 0;">Siga Mara</h3>
-                    <p><strong>Redes Sociais e Streaming:</strong></p>
-                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <div class="contact-card">
+                    <h3>Siga Mara</h3>
+                    <div class="social-links">
                         <a href="#">🎵 Spotify</a>
                         <a href="#">🎵 Apple Music</a>
                         <a href="#">📱 Instagram</a>
@@ -201,17 +140,19 @@
                     </div>
                 </div>
                 
-                <div style="background: #f8f8f8; padding: 1.5rem; border-radius: 10px;">
-                    <h3 style="color: #c9a96e; margin-top: 0;">Rider Técnico</h3>
-                    <p>Requisitos técnicos profissionais e informações de configuração do palco disponíveis mediante solicitação.</p>
-                    <a href="assets/EPK_Mara_Halunga_Eng.pdf" target="_blank" style="display: inline-block; padding: 0.7rem 1.5rem; background: #c9a96e; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; margin-top: 1rem;">Baixar EPK Completo</a>
+                <div class="contact-card">
+                    <h3>Kit de Imprensa</h3>
+                    <p>Materiais profissionais e requisitos técnicos disponíveis mediante solicitação.</p>
+                    <a href="assets/EPK_Mara_Halunga_Eng.pdf" target="_blank" class="cta-button" style="display: inline-block; margin-top: 1rem;">Baixar EPK</a>
                 </div>
             </div>
         </section>
     </main>
+    
     <footer>
         <p>&copy; 2025 Mara Halunga. Todos os direitos reservados.</p>
     </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
