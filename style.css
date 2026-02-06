@@ -70,16 +70,21 @@ header {
 }
 
 .logo img {
-    height: 48px;
+    height: 80px;
     width: auto;
     display: block;
 }
 
 .footer-logo {
-    height: 28px;
+    height: 36px;
     width: auto;
     vertical-align: middle;
     margin-right: 0.5rem;
+}
+
+@media (max-width: 640px) {
+    .logo img { height: 48px; }
+    .footer-logo { height: 28px; }
 }
 
 .language-selector {
