@@ -60,6 +60,19 @@ header {
     letter-spacing: 1px;
 }
 
+.logo img {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
+.footer-logo {
+    height: 28px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
 .language-selector {
     display: flex;
     gap: 0.5rem;
@@ -132,7 +145,7 @@ nav a:hover::after {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('assets/mara_banner.jpg');
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('assets/images/closed.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
