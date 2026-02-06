@@ -17,8 +17,17 @@
     --gradient-gold: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #b8941f 100%);
 }
 
+/* Local font */
+@font-face {
+    font-family: 'DanhDa';
+    src: url('assets/fonts/DanhDa-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
-    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
     background: var(--dark-bg);
     color: var(--text-light);
     line-height: 1.6;
@@ -167,6 +176,11 @@ nav a:hover::after {
     z-index: 2;
     max-width: 800px;
     padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-content h1 {
@@ -180,6 +194,16 @@ nav a:hover::after {
     background-clip: text;
     letter-spacing: 2px;
     text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+/* Hero logo (replaces text h1) */
+.hero-logo {
+    display: block;
+    /* approx 3x larger than previous size */
+    max-width: 1080px;
+    width: clamp(660px, 80vw, 1080px);
+    height: auto;
+    margin: 0 auto 1rem;
 }
 
 .hero-content .subtitle {
