@@ -1,22 +1,22 @@
-{
-  "upcoming": [],
-  "past": [
-    { "name": "FITS", "location": { "en": "Sibiu", "pt": "Sibiu" }, "years": "2025" },
-    { "name": "Venetic Live", "location": { "en": "Gherdeal", "pt": "Gherdeal" }, "years": "2025" },
-    { "name": "Zaiafet pe Lună", "location": { "en": "Luna de Jos", "pt": "Luna de Jos" }, "years": "2025" },
-    { "name": "Csíki Jazz Festival", "location": { "en": "Transylvania", "pt": "Transilvânia" }, "years": "2025, 2022" },
-    { "name": "SamFest Jazz Festival", "location": { "en": "Satu-Mare", "pt": "Satu-Mare" }, "years": "2025" },
-    { "name": "Cucuteni Jazz Festival", "location": { "en": "Iași", "pt": "Iași" }, "years": "2024" },
-    { "name": "RoLand Jazz Festival", "location": { "en": "Transylvania", "pt": "Transilvânia" }, "years": "2023, 2022" },
-    { "name": "Weekend Sessions Festival", "location": { "en": "Bucharest", "pt": "Bucareste" }, "years": "2023" },
-    { "name": "Câmpina Jazz Festival", "location": { "en": "", "pt": "" }, "years": "2023" },
-    { "name": "Breaza Jazz Pop Rock Festival", "location": { "en": "", "pt": "" }, "years": "2023" },
-    { "name": "Lavanda Festival", "location": { "en": "Craiova", "pt": "Craiova" }, "years": "2022" },
-    { "name": "Drumul Vinului Music Festival", "location": { "en": "Bistrița", "pt": "Bistrița" }, "years": "2022" },
-    { "name": "Amural Festival", "location": { "en": "Brașov", "pt": "Brașov" }, "years": "2021" },
-    { "name": "Pelicula Festival", "location": { "en": "Bucharest", "pt": "Bucareste" }, "years": "2019, 2020" },
-    { "name": "TAMTAM Festival", "location": { "en": "Brașov", "pt": "Brașov" }, "years": "2019" },
-    { "name": "World Experience Festival", "location": { "en": "Bucharest", "pt": "Bucareste" }, "years": "2019" },
-    { "name": "Värmdö Festivalen", "location": { "en": "Stockholm", "pt": "Estocolmo" }, "years": "2019" }
-  ]
-}
+[
+  { "name": "FITS", "location": { "en": "Sibiu", "pt": "Sibiu" }, "date": "2025" },
+  { "name": "Venetic Live", "location": { "en": "Gherdeal", "pt": "Gherdeal" }, "date": "2025" },
+  { "name": "Zaiafet pe Lună", "location": { "en": "Luna de Jos", "pt": "Luna de Jos" }, "date": "2025" },
+  { "name": "Csíki Jazz Festival", "location": { "en": "Transylvania", "pt": "Transilvânia" }, "date": "2025" },
+  { "name": "Csíki Jazz Festival", "location": { "en": "Transylvania", "pt": "Transilvânia" }, "date": "2022" },
+  { "name": "SamFest Jazz Festival", "location": { "en": "Satu-Mare", "pt": "Satu-Mare" }, "date": "2025" },
+  { "name": "Cucuteni Jazz Festival", "location": { "en": "Iași", "pt": "Iași" }, "date": "2024" },
+  { "name": "RoLand Jazz Festival", "location": { "en": "Transylvania", "pt": "Transilvânia" }, "date": "2023" },
+  { "name": "RoLand Jazz Festival", "location": { "en": "Transylvania", "pt": "Transilvânia" }, "date": "2022" },
+  { "name": "Weekend Sessions Festival", "location": { "en": "Bucharest", "pt": "Bucareste" }, "date": "2023" },
+  { "name": "Câmpina Jazz Festival", "location": {}, "date": "2023" },
+  { "name": "Breaza Jazz Pop Rock Festival", "location": {}, "date": "2023" },
+  { "name": "Lavanda Festival", "location": { "en": "Craiova", "pt": "Craiova" }, "date": "2022" },
+  { "name": "Drumul Vinului Music Festival", "location": { "en": "Bistrița", "pt": "Bistrița" }, "date": "2022" },
+  { "name": "Amural Festival", "location": { "en": "Brașov", "pt": "Brașov" }, "date": "2021" },
+  { "name": "Pelicula Festival", "location": { "en": "Bucharest", "pt": "Bucareste" }, "date": "2020" },
+  { "name": "Pelicula Festival", "location": { "en": "Bucharest", "pt": "Bucareste" }, "date": "2019" },
+  { "name": "TAMTAM Festival", "location": { "en": "Brașov", "pt": "Brașov" }, "date": "2019" },
+  { "name": "World Experience Festival", "location": { "en": "Bucharest", "pt": "Bucareste" }, "date": "2019" },
+  { "name": "Värmdö Festivalen", "location": { "en": "Stockholm", "pt": "Estocolmo" }, "date": "2019" }
+]
