@@ -463,6 +463,37 @@ section h2 {
     margin-bottom: 3rem;
 }
 
+.past-concerts-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 0.95rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1.2rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.past-concerts-toggle::after {
+    content: '▼';
+    font-size: 0.7rem;
+    transition: transform 0.25s;
+}
+
+.past-concerts-toggle.expanded::after {
+    transform: rotate(180deg);
+}
+
+.past-concerts-toggle:hover {
+    background: var(--primary-gold);
+    color: var(--dark-bg);
+}
+
 .concerts-subsection-title {
     color: var(--primary-gold);
     font-family: 'Playfair Display', serif;
