@@ -454,9 +454,27 @@ section h2 {
     font-style: italic;
 }
 
-/* Performances Section - Grid */
-#performances {
+/* Concerts Section - Grid */
+#concerts {
     text-align: center;
+}
+
+.concerts-subsection {
+    margin-bottom: 3rem;
+}
+
+.concerts-subsection-title {
+    color: var(--primary-gold);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.no-concerts-message {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    font-style: italic;
 }
 
 .performance-grid {
