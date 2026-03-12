@@ -531,6 +531,18 @@ section h2 {
     padding-left: 2.5rem;
 }
 
+.ticket-link {
+    color: var(--primary-gold);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.ticket-link:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
 /* Booking Section - Call to Action */
 .booking-section {
     background: var(--gradient-gold);

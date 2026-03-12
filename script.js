@@ -78,12 +78,24 @@
     return text;
   }
 
+  var ticketLabel = { en: 'Tickets', pt: 'Ingressos' };
+
   function buildList(concerts) {
     var ul = document.createElement('ul');
     ul.className = 'achievements';
     concerts.forEach(function (c) {
       var li = document.createElement('li');
       li.textContent = formatConcert(c);
+      if (c.url) {
+        var link = document.createElement('a');
+        link.href = c.url;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.className = 'ticket-link';
+        link.textContent = ticketLabel[lang] || ticketLabel.en;
+        li.appendChild(document.createTextNode(' — '));
+        li.appendChild(link);
+      }
       ul.appendChild(li);
     });
     return ul;
