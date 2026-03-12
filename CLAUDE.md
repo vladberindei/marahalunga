@@ -15,7 +15,6 @@ Static artist portfolio website for **Mara Halunga**, a Romanian-Brazilian singe
 ```
 marahalunga/
 ├── index.html          # English version (primary/canonical page)
-├── index-ro.html       # Romanian version
 ├── index-pt.html       # Portuguese version
 ├── style.css           # All styles (single file)
 ├── script.js           # Minimal JS placeholder (3 lines)
@@ -103,11 +102,11 @@ Each HTML file follows the same section order:
 
 ## Multilingual Workflow
 
-Three parallel HTML files share the same `style.css` and `script.js`. When updating content:
+Two parallel HTML files share the same `style.css` and `script.js`. When updating content:
 
-1. **Always update all three files** (`index.html`, `index-ro.html`, `index-pt.html`) to keep them in sync.
-2. Structure and CSS classes must remain identical across all three — only the text content differs.
-3. The language switcher `<div class="language-selector">` links between the three files; make sure the `active` class is on the correct language button in each file.
+1. **Always update both files** (`index.html`, `index-pt.html`) to keep them in sync.
+2. Structure and CSS classes must remain identical across both — only the text content differs.
+3. The language switcher `<div class="language-selector">` links between the two files (EN / PT); make sure the `active` class is on the correct language button in each file.
 
 ---
 
