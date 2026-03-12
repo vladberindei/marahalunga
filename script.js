@@ -9,12 +9,16 @@
     en: {
       upcoming: 'Upcoming Concerts',
       past: 'Past Concerts',
-      noUpcoming: 'New dates coming soon — stay tuned!'
+      noUpcoming: 'New dates coming soon — stay tuned!',
+      showPast: 'Show Past Concerts',
+      hidePast: 'Hide Past Concerts'
     },
     pt: {
       upcoming: 'Próximos Concertos',
       past: 'Concertos Anteriores',
-      noUpcoming: 'Novas datas em breve — fique ligado!'
+      noUpcoming: 'Novas datas em breve — fique ligado!',
+      showPast: 'Ver Concertos Anteriores',
+      hidePast: 'Ocultar Concertos Anteriores'
     }
   };
 
@@ -217,7 +221,33 @@
 
     container.appendChild(buildSection(l.upcoming, upcoming, l.noUpcoming));
     if (groupedPast.length > 0) {
-      container.appendChild(buildSection(l.past, groupedPast, ''));
+      var pastSection = buildSection(l.past, groupedPast, '');
+      var grid = pastSection.querySelector('.performance-grid');
+      grid.classList.add('past-concerts-grid');
+      grid.style.display = 'none';
+
+      var toggle = document.createElement('button');
+      toggle.className = 'past-concerts-toggle';
+      toggle.textContent = l.showPast;
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.addEventListener('click', function () {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        if (expanded) {
+          grid.style.display = 'none';
+          toggle.textContent = l.showPast;
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.classList.remove('expanded');
+        } else {
+          grid.style.display = '';
+          toggle.textContent = l.hidePast;
+          toggle.setAttribute('aria-expanded', 'true');
+          toggle.classList.add('expanded');
+        }
+      });
+
+      var h3 = pastSection.querySelector('.concerts-subsection-title');
+      h3.parentNode.insertBefore(toggle, grid);
+      container.appendChild(pastSection);
     }
   }
 
