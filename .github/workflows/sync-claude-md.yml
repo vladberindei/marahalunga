@@ -1,0 +1,61 @@
+name: CLAUDE.md Sync Check
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  check-claude-md:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if CLAUDE.md was updated
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              per_page: 100,
+            });
+
+            const filenames = files.map(f => f.filename);
+            const claudeMdChanged = filenames.includes('CLAUDE.md');
+            const codeFiles = filenames.filter(f =>
+              f !== 'CLAUDE.md' &&
+              !f.startsWith('.github/') &&
+              !f.startsWith('assets/images/')
+            );
+
+            if (codeFiles.length > 0 && !claudeMdChanged) {
+              const body = [
+                '**Reminder:** This PR modifies code files but does not update `CLAUDE.md`.',
+                '',
+                'If your changes affect the codebase structure, conventions, data formats, or workflows, please update `CLAUDE.md` to keep it in sync.',
+                '',
+                'Changed files that may require a docs update:',
+                ...codeFiles.map(f => `- \`${f}\``),
+              ].join('\n');
+
+              // Check for existing reminder to avoid duplicates
+              const { data: comments } = await github.rest.issues.listComments({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+              });
+              const hasReminder = comments.some(c =>
+                c.body.includes('does not update `CLAUDE.md`')
+              );
+
+              if (!hasReminder) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  body,
+                });
+              }
+            }

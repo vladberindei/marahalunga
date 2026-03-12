@@ -15,17 +15,21 @@ Static artist portfolio website for **Mara Halunga**, a Romanian-Brazilian singe
 ```
 marahalunga/
 ├── index.html          # English version (primary/canonical page)
-├── index-ro.html       # Romanian version
 ├── index-pt.html       # Portuguese version
 ├── style.css           # All styles (single file)
-├── script.js           # Minimal JS placeholder (3 lines)
+├── script.js           # Concert data loader & renderer (~230 lines)
 ├── CNAME               # GitHub Pages custom domain: www.marahalunga.com
+├── .github/
+│   └── workflows/
+│       ├── claude.yml          # Claude Code integration (PR/issue comments)
+│       └── sync-claude-md.yml  # Enforces CLAUDE.md stays in sync on PRs
 ├── assets/
 │   ├── images/         # All images (logos, portraits, banners)
 │   │   └── originals/  # Pre-optimization backups (do not edit)
 │   ├── docs/           # EPK PDF and other documents
 │   ├── fonts/          # DanhDa-Bold.otf (custom logo font)
-│   └── data/           # Placeholder (currently unused)
+│   └── data/
+│       └── concerts.json  # Concert data (upcoming + past)
 └── scripts/
     └── optimize_images.py  # Image optimization utility (Python/Pillow)
 ```
@@ -36,9 +40,10 @@ marahalunga/
 
 | Layer | Technology |
 |---|---|
-| Markup | HTML5 (3 separate language files) |
-| Styles | CSS3 (single `style.css`, ~850 lines) |
-| Scripts | Vanilla JS (minimal placeholder) |
+| Markup | HTML5 (2 language files: EN, PT) |
+| Styles | CSS3 (single `style.css`, ~900 lines) |
+| Scripts | Vanilla JS (concert loader + rendering) |
+| Data | JSON (`concerts.json` for concert listings) |
 | Fonts | Google Fonts (Playfair Display, Source Sans Pro) + local DanhDa-Bold.otf |
 | Hosting | GitHub Pages |
 | Domain | CNAME → www.marahalunga.com |
@@ -48,15 +53,15 @@ No npm, no bundler, no transpiler, no framework, no linter config.
 
 ---
 
-## Page Structure (all three HTML files)
+## Page Structure (both HTML files)
 
 Each HTML file follows the same section order:
 
-1. **`<header>`** — Fixed navigation, logo, language switcher (EN/RO/PT)
+1. **`<header>`** — Fixed navigation, logo, language switcher (EN/PT)
 2. **`#home`** — Hero section: full-screen background, logo image, subtitle, CTA button
 3. **`#about`** — Biography text + portrait image (`.about-text` / `.about-image`)
 4. **`#music`** — Album card for "Vento Leste" with track list, streaming links, musician credits
-5. **`#performances`** — Two performance cards with festival listings + booking blurb
+5. **`#concerts`** — Dynamically loaded from `concerts.json`; split into upcoming and past subsections
 6. **`#contact`** — Three contact cards: bookings email, social links, EPK download
 7. **`<footer>`** — Copyright with colored logo
 
@@ -94,7 +99,12 @@ Each HTML file follows the same section order:
 - `.stream-btn` — streaming platform links
 - `.lang-btn` / `.lang-btn.active` — language switcher buttons
 - `.album-card` — music section card
-- `.performance-card` — festival listing cards
+- `.concerts-subsection` — upcoming/past concerts wrapper
+- `.concerts-subsection-title` — subsection heading (gold, Playfair italic)
+- `.performance-grid` — CSS Grid layout for concert cards
+- `.performance-card` — concert listing cards
+- `.ticket-link` — link to buy tickets (gold, bold)
+- `.booking-section` — CTA section with gradient gold background
 - `.contact-card` — contact section cards
 - `.hero-logo` — the large centered logo in the hero
 - `.footer-logo` — small logo in footer
@@ -103,11 +113,12 @@ Each HTML file follows the same section order:
 
 ## Multilingual Workflow
 
-Three parallel HTML files share the same `style.css` and `script.js`. When updating content:
+Two parallel HTML files share the same `style.css` and `script.js`. When updating content:
 
-1. **Always update all three files** (`index.html`, `index-ro.html`, `index-pt.html`) to keep them in sync.
-2. Structure and CSS classes must remain identical across all three — only the text content differs.
-3. The language switcher `<div class="language-selector">` links between the three files; make sure the `active` class is on the correct language button in each file.
+1. **Always update both files** (`index.html`, `index-pt.html`) to keep them in sync.
+2. Structure and CSS classes must remain identical across both — only the text content differs.
+3. The language switcher `<div class="language-selector">` links between the two files; make sure the `active` class is on the correct language button in each file.
+4. Concert data is shared via `assets/data/concerts.json` — `script.js` renders it in the correct language automatically.
 
 ---
 
@@ -169,10 +180,34 @@ Deployment is fully automatic via GitHub Pages:
 
 ---
 
+## Concerts Data (`assets/data/concerts.json`)
+
+Concert data is stored as a JSON array. Each entry has:
+
+```json
+{
+  "name": "Festival Name",
+  "location": { "en": "City, Country", "pt": "Cidade, País" },
+  "date": "2026-03-14",
+  "time": "20:00",
+  "url": "https://tickets.example.com"
+}
+```
+
+- **`date`** supports variable precision: `"2026-03-14"` (full), `"2025-06"` (month), `"2025"` (year only)
+- **`time`** is optional — shown only when present
+- **`url`** is optional — renders a ticket link when present
+- `script.js` automatically splits concerts into upcoming vs. past based on the current date
+- Past concerts with the same name and location are grouped together, showing years
+
+**Add a new concert:** Add an object to the array in `assets/data/concerts.json`. No HTML changes needed.
+
+---
+
 ## Common Tasks
 
-**Add a new festival appearance:**
-Add a `<li>` to the appropriate `.achievements` list in all three HTML files.
+**Add a new concert/festival appearance:**
+Add an entry to `assets/data/concerts.json` — concerts are rendered dynamically.
 
 **Update streaming links:**
 Search for `stream-btn` in all HTML files and update `href` values.
@@ -181,8 +216,8 @@ Search for `stream-btn` in all HTML files and update `href` values.
 Edit the relevant `<p>` or `<h2>` in each HTML file with the appropriate translation.
 
 **Add a new section:**
-1. Add the `<section id="...">` block in all three HTML files
-2. Add a nav `<li><a href="#...">` link in all three headers
+1. Add the `<section id="...">` block in both HTML files
+2. Add a nav `<li><a href="#...">` link in both headers
 3. Add CSS for the new section to `style.css`
 
 **Add JavaScript interactivity:**
@@ -197,7 +232,22 @@ Commit messages observed in this project follow a short imperative style:
 - `Update website content based on new EPK`
 - `Improve mobile responsiveness: fix hero logo sizing, add tablet & phone breakpoints`
 
-No linting, no hooks, no CI. Commit and push directly.
+A GitHub Actions workflow (`claude.yml`) provides Claude Code integration for PR and issue comments.
+
+A `sync-claude-md.yml` workflow runs on every PR and posts a reminder comment if `CLAUDE.md` was not updated alongside other changes.
+
+---
+
+## Keeping CLAUDE.md in Sync
+
+**This file must be updated whenever the codebase structure, conventions, or workflows change.** A GitHub Actions workflow (`sync-claude-md.yml`) enforces this by posting a reminder on PRs that modify code but don't update `CLAUDE.md`.
+
+Changes that require a CLAUDE.md update include:
+- Adding, removing, or renaming files/sections
+- Changing the technology stack or data formats
+- Modifying the multilingual workflow
+- Adding new CSS classes or design tokens
+- Changing deployment, build, or CI/CD processes
 
 ---
 
@@ -205,7 +255,6 @@ No linting, no hooks, no CI. Commit and push directly.
 
 - No package.json / node_modules
 - No test suite
-- No CI/CD pipeline
 - No server-side code
 - No database
 - No `.gitignore` (all files tracked)
