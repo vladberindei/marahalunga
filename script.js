@@ -18,18 +18,37 @@
     }
   };
 
+  // Get the current date/time in Bucharest timezone as a comparable Date object.
+  // Concert times are in Bucharest local time, so "now" must use the same reference.
+  function getBucharestNow() {
+    var now = new Date();
+    var parts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Europe/Bucharest',
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', second: '2-digit',
+      hour12: false
+    }).formatToParts(now);
+    var p = {};
+    parts.forEach(function (part) { p[part.type] = parseInt(part.value, 10); });
+    return new Date(p.year, p.month - 1, p.day, p.hour, p.minute, p.second);
+  }
+
   // Determine if a concert date is in the future.
   // Supports "2025", "2025-07", "2025-07-15", and optional "time" field.
+  // All times are interpreted as Bucharest local time (Europe/Bucharest).
   function isUpcoming(concert) {
-    var now = new Date();
+    var now = getBucharestNow();
     var parts = concert.date.split('-');
     var year = parseInt(parts[0], 10);
     var month = parts[1] ? parseInt(parts[1], 10) : null;
     var day = parts[2] ? parseInt(parts[2], 10) : null;
 
     if (day && concert.time) {
-      // Full date + time: compare against exact moment
-      var dt = new Date(concert.date + 'T' + concert.time);
+      // Full date + time in Bucharest time: compare against exact moment
+      var timeParts = concert.time.split(':');
+      var h = parseInt(timeParts[0], 10);
+      var m = parseInt(timeParts[1] || '0', 10);
+      var dt = new Date(year, month - 1, day, h, m);
       return dt >= now;
     }
     if (day) {
