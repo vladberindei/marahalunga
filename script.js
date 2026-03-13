@@ -116,6 +116,8 @@
         link.rel = 'noopener';
         link.className = 'ticket-link';
         link.textContent = ticketLabel[lang] || ticketLabel.en;
+        link.setAttribute('data-umami-event', 'ticket-click');
+        link.setAttribute('data-umami-event-concert', c.name);
         li.appendChild(document.createTextNode(' — '));
         li.appendChild(link);
       }
@@ -237,11 +239,13 @@
           toggle.textContent = l.showPast;
           toggle.setAttribute('aria-expanded', 'false');
           toggle.classList.remove('expanded');
+          if (typeof umami !== 'undefined') umami.track('hide-past-concerts');
         } else {
           grid.style.display = '';
           toggle.textContent = l.hidePast;
           toggle.setAttribute('aria-expanded', 'true');
           toggle.classList.add('expanded');
+          if (typeof umami !== 'undefined') umami.track('show-past-concerts');
         }
       });
 
