@@ -47,6 +47,7 @@ marahalunga/
 | Fonts | Google Fonts (Playfair Display, Source Sans Pro) + local DanhDa-Bold.otf |
 | Hosting | GitHub Pages |
 | Domain | CNAME → www.marahalunga.com |
+| Analytics | Umami (cloud-hosted, privacy-friendly) |
 | Utilities | Python 3 + Pillow (image optimization only) |
 
 No npm, no bundler, no transpiler, no framework, no linter config.
@@ -222,6 +223,37 @@ Edit the relevant `<p>` or `<h2>` in each HTML file with the appropriate transla
 
 **Add JavaScript interactivity:**
 Write it in `script.js`. Keep it vanilla JS — no frameworks.
+
+---
+
+## Analytics & Click Tracking
+
+Umami analytics is loaded in both HTML files via:
+
+```html
+<script defer src="https://cloud.umami.is/script.js" data-website-id="67272770-7aca-401e-bea0-4c4793c2c844"></script>
+```
+
+Page views are tracked automatically. Custom click events use `data-umami-event` attributes on static HTML elements, and `umami.track()` in `script.js` for dynamically generated elements.
+
+**Event naming conventions** — always use these exact names (language-independent so EN and PT stats aggregate):
+
+| Event name | Element |
+|---|---|
+| `nav-home`, `nav-about`, `nav-music`, `nav-concerts`, `nav-contact` | Navigation links |
+| `lang-switch-en`, `lang-switch-pt` | Language switcher buttons |
+| `hero-cta` | Hero "Discover Music" CTA button |
+| `stream-spotify`, `stream-youtube`, `stream-all-platforms` | Music section streaming buttons |
+| `social-spotify`, `social-instagram`, `social-youtube`, `social-linktree` | Contact section social links |
+| `contact-booking-email` | Booking email link |
+| `download-epk` | EPK download button |
+| `ticket-click` | Concert ticket links (dynamic; also sets `data-umami-event-concert` to the concert name) |
+| `show-past-concerts`, `hide-past-concerts` | Past concerts toggle button (dynamic) |
+
+**Rules:**
+- Add `data-umami-event="<event-name>"` to any new static interactive element in both HTML files.
+- For dynamically created elements in `script.js`, use `umami.track('<event-name>')` guarded by `if (typeof umami !== 'undefined')`.
+- Keep event names identical across `index.html` and `index-pt.html`.
 
 ---
 
