@@ -42,7 +42,7 @@ marahalunga/
 |---|---|
 | Markup | HTML5 (2 language files: EN, PT) |
 | Styles | CSS3 (single `style.css`, ~900 lines) |
-| Scripts | Vanilla JS (concert loader + rendering) |
+| Scripts | Vanilla JS (concert loader + rendering + gallery lightbox) |
 | Data | JSON (`concerts.json` for concert listings) |
 | Fonts | Google Fonts (Playfair Display, Source Sans Pro) + local DanhDa-Bold.otf |
 | Hosting | GitHub Pages |
@@ -61,10 +61,11 @@ Each HTML file follows the same section order:
 1. **`<header>`** — Fixed navigation, logo, language switcher (EN/PT)
 2. **`#home`** — Hero section: full-screen background, logo image, subtitle, CTA button
 3. **`#about`** — Biography text + portrait image (`.about-text` / `.about-image`)
-4. **`#music`** — Album card for "Vento Leste" with track list, streaming links, musician credits
-5. **`#concerts`** — Dynamically loaded from `concerts.json`; split into upcoming and past subsections
-6. **`#contact`** — Three contact cards: bookings email, social links, EPK download
-7. **`<footer>`** — Copyright with colored logo
+4. **`#music`** — Album card for "Vento Leste" with Spotify embed, YouTube video, streaming links, musician credits
+5. **`#gallery`** — Photo gallery grid (6 images) with click-to-enlarge lightbox
+6. **`#concerts`** — Dynamically loaded from `concerts.json`; split into upcoming and past subsections
+7. **`#contact`** — Four contact cards: bookings email, social links, EPK download, newsletter signup
+8. **`<footer>`** — Copyright with colored logo
 
 ---
 
@@ -107,6 +108,11 @@ Each HTML file follows the same section order:
 - `.ticket-link` — link to buy tickets (gold, bold)
 - `.booking-section` — CTA section with gradient gold background
 - `.contact-card` — contact section cards
+- `.newsletter-card` / `.newsletter-cta` — newsletter signup card and CTA button
+- `.spotify-embed` — Spotify iframe embed wrapper
+- `.video-embed` / `.video-wrapper` — YouTube video embed with 16:9 responsive wrapper
+- `.gallery-grid` / `.gallery-item` — photo gallery grid and individual items
+- `.gallery-lightbox` — full-screen photo lightbox overlay
 - `.hero-logo` — the large centered logo in the hero
 - `.footer-logo` — small logo in footer
 
@@ -131,6 +137,12 @@ Two parallel HTML files share the same `style.css` and `script.js`. When updatin
 | `assets/images/Portrait 1 copy.jpg` | Artist portrait (About section) |
 | `assets/images/closed.jpg` | Hero background image |
 | `assets/fonts/DanhDa-Bold.otf` | Custom display font |
+| `assets/images/Portrait 2 copy.jpg` | Gallery photo (portrait) |
+| `assets/images/V1 sea copy.jpg` | Gallery photo (by the sea) |
+| `assets/images/Silhouette 1 copy.jpg` | Gallery photo (silhouette) |
+| `assets/images/V3.jpg` | Gallery photo |
+| `assets/images/V1 sepia 36.jpg` | Gallery photo (sepia) |
+| `assets/images/mara_banner_2.jpg` | Gallery photo (banner) |
 | `assets/docs/EPK_Mara_Halunga_EN_26.pdf` | Electronic Press Kit (19.4 MB) |
 
 Do **not** commit new large images without running the optimizer first (see below).
@@ -249,6 +261,9 @@ Page views are tracked automatically. Custom click events use `data-umami-event`
 | `download-epk` | EPK download button |
 | `ticket-click` | Concert ticket links (dynamic; also sets `data-umami-event-concert` to the concert name) |
 | `show-past-concerts`, `hide-past-concerts` | Past concerts toggle button (dynamic) |
+| `nav-gallery` | Gallery navigation link |
+| `gallery-photo-view` | Gallery photo clicked to enlarge (dynamic) |
+| `newsletter-signup` | Newsletter/mailing list CTA button |
 
 **Rules:**
 - Add `data-umami-event="<event-name>"` to any new static interactive element in both HTML files.
