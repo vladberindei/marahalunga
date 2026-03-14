@@ -255,6 +255,7 @@ main {
 section {
     margin: 8rem 0;
     position: relative;
+    scroll-margin-top: 120px;
 }
 
 section h2 {
