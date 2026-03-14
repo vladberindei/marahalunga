@@ -174,12 +174,20 @@
     grid.className = 'performance-grid';
 
     if (concerts.length === 0) {
+      grid.style.gridTemplateColumns = '1fr';
       var card = document.createElement('div');
       card.className = 'performance-card';
+      card.style.textAlign = 'center';
       var msg = document.createElement('p');
       msg.className = 'no-concerts-message';
       msg.textContent = emptyMessage;
       card.appendChild(msg);
+      grid.appendChild(card);
+    } else if (concerts.length === 1) {
+      grid.style.gridTemplateColumns = '1fr';
+      var card = document.createElement('div');
+      card.className = 'performance-card';
+      card.appendChild(buildList(concerts));
       grid.appendChild(card);
     } else {
       // Split into two cards for visual balance
