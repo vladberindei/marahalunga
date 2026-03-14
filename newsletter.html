@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mara Halunga - Newsletter</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary-gold: #d4af37;
+            --secondary-gold: #b8941f;
+            --dark-bg: #0a0a0a;
+            --medium-dark: #1a1a1a;
+            --light-dark: #2a2a2a;
+            --text-light: #ffffff;
+            --text-gray: #cccccc;
+            --gradient-gold: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #b8941f 100%);
+        }
+
+        body {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Newsletter container */
+        .newsletter {
+            max-width: 680px;
+            margin: 0 auto;
+            background: var(--medium-dark);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        /* Header banner */
+        .newsletter-header {
+            position: relative;
+            text-align: center;
+            padding: 3rem 2rem 2rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(26, 26, 26, 1)),
+                        url('assets/images/closed.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .newsletter-header img.logo {
+            height: 60px;
+            width: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .newsletter-date {
+            font-size: 0.85rem;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .newsletter-edition {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: var(--text-gray);
+            font-style: italic;
+        }
+
+        /* Top gold accent line */
+        .gold-accent {
+            height: 3px;
+            background: var(--gradient-gold);
+        }
+
+        /* Content area */
+        .newsletter-body {
+            padding: 2.5rem 2.5rem 1.5rem;
+        }
+
+        .greeting {
+            font-size: 1.15rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        /* Section blocks */
+        .nl-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .nl-section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--primary-gold);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .nl-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .nl-section p {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .nl-section strong {
+            color: var(--text-light);
+        }
+
+        /* Featured image */
+        .featured-image {
+            width: 100%;
+            border-radius: 12px;
+            margin: 1.2rem 0 1.5rem;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        /* Divider */
+        .nl-divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+            margin: 2rem 0;
+        }
+
+        /* Concert listing */
+        .concert-item {
+            background: var(--light-dark);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--primary-gold);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .concert-details h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 0.3rem;
+        }
+
+        .concert-details .concert-meta {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .concert-date-badge {
+            text-align: center;
+            min-width: 60px;
+            flex-shrink: 0;
+        }
+
+        .concert-date-badge .day {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            line-height: 1;
+        }
+
+        .concert-date-badge .month {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-gray);
+        }
+
+        /* CTA button */
+        .nl-cta {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            background: var(--gradient-gold);
+            color: var(--dark-bg);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25);
+        }
+
+        .nl-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
+        }
+
+        /* Quote / pull quote */
+        .nl-quote {
+            border-left: 3px solid var(--primary-gold);
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .nl-quote p {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .nl-quote cite {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            font-style: normal;
+            font-size: 0.85rem;
+            color: var(--primary-gold);
+        }
+
+        /* Two-column feature */
+        .nl-two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .nl-feature-card {
+            background: var(--light-dark);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .nl-feature-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .nl-feature-card .card-body {
+            padding: 1rem 1.2rem;
+        }
+
+        .nl-feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 0.4rem;
+        }
+
+        .nl-feature-card p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 0;
+        }
+
+        .nl-feature-card a {
+            color: var(--primary-gold);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .nl-feature-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Spotify mini embed */
+        .nl-spotify {
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        /* Footer */
+        .newsletter-footer {
+            background: var(--dark-bg);
+            padding: 2rem 2.5rem;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 2px;
+        }
+
+        .footer-social a:hover {
+            color: var(--primary-gold);
+            border-bottom-color: var(--primary-gold);
+        }
+
+        .footer-meta {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .footer-meta a {
+            color: var(--primary-gold);
+            text-decoration: none;
+        }
+
+        .footer-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-logo {
+            height: 32px;
+            width: auto;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 680px) {
+            .newsletter-body {
+                padding: 2rem 1.5rem 1rem;
+            }
+
+            .newsletter-footer {
+                padding: 1.5rem;
+            }
+
+            .nl-section h2 {
+                font-size: 1.4rem;
+            }
+
+            .nl-two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .concert-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .concert-date-badge {
+                display: flex;
+                gap: 0.5rem;
+                align-items: baseline;
+            }
+
+            .concert-date-badge .day {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Web-only banner */
+        .web-banner {
+            background: var(--light-dark);
+            text-align: center;
+            padding: 0.6rem;
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+
+        .web-banner a {
+            color: var(--primary-gold);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="web-banner">
+        This is an example newsletter. <a href="index.html">Visit website</a>
+    </div>
+
+    <div class="newsletter">
+        <div class="gold-accent"></div>
+
+        <!-- Header -->
+        <div class="newsletter-header">
+            <img src="assets/images/mara-halunga-logo-color.png" alt="Mara Halunga" class="logo">
+            <div class="newsletter-date">March 2026</div>
+            <div class="newsletter-edition">Newsletter #1 — Spring Edition</div>
+        </div>
+
+        <!-- Body -->
+        <div class="newsletter-body">
+
+            <p class="greeting">
+                Dear friends,<br><br>
+                Spring is here, and with it comes exciting new music, unforgettable concerts, and the continuation of a journey that bridges Romania and Brazil through sound. Here's what's been happening and what's coming next.
+            </p>
+
+            <hr class="nl-divider">
+
+            <!-- Featured story -->
+            <div class="nl-section">
+                <div class="nl-section-label">Featured</div>
+                <h2>Vento Leste Tour: A Season of Connection</h2>
+                <img src="assets/images/mara_banner_2.jpg" alt="Mara Halunga live performance" class="featured-image">
+                <p>
+                    The <strong>Vento Leste Tour</strong> has been an extraordinary journey of bringing together audiences across borders. From intimate jazz clubs in Bucharest to open-air stages in S&atilde;o Paulo, the music of <em>Vento Leste</em> found its way to the hearts of listeners who share a love for the unexpected.
+                </p>
+                <p>
+                    Each performance has been a unique conversation between cultures — Romanian folk melodies meeting Brazilian rhythms, creating something entirely new each night.
+                </p>
+                <a href="index.html#concerts" class="nl-cta">See Upcoming Dates</a>
+            </div>
+
+            <hr class="nl-divider">
+
+            <!-- Quote -->
+            <div class="nl-quote">
+                <p>"Music doesn't need a passport. It crosses every border and speaks every language."</p>
+                <cite>— Mara Halunga</cite>
+            </div>
+
+            <hr class="nl-divider">
+
+            <!-- Upcoming concerts -->
+            <div class="nl-section">
+                <div class="nl-section-label">Upcoming Concerts</div>
+                <h2>Where to See Mara Live</h2>
+
+                <div class="concert-item">
+                    <div class="concert-date-badge">
+                        <div class="day">22</div>
+                        <div class="month">Mar</div>
+                    </div>
+                    <div class="concert-details">
+                        <h3>Jazz in the Park — Preview Night</h3>
+                        <div class="concert-meta">Cluj-Napoca, Romania — 20:00</div>
+                    </div>
+                </div>
+
+                <div class="concert-item">
+                    <div class="concert-date-badge">
+                        <div class="day">15</div>
+                        <div class="month">Apr</div>
+                    </div>
+                    <div class="concert-details">
+                        <h3>Sala Radio — Duo Session</h3>
+                        <div class="concert-meta">Bucharest, Romania — 19:30</div>
+                    </div>
+                </div>
+
+                <div class="concert-item">
+                    <div class="concert-date-badge">
+                        <div class="day">03</div>
+                        <div class="month">May</div>
+                    </div>
+                    <div class="concert-details">
+                        <h3>Festival Musiques du Monde</h3>
+                        <div class="concert-meta">Lyon, France — 21:00</div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="nl-divider">
+
+            <!-- Music spotlight -->
+            <div class="nl-section">
+                <div class="nl-section-label">Music Spotlight</div>
+                <h2>Now Streaming: Vento Leste</h2>
+                <p>
+                    If you haven't listened yet — or if you want to revisit it — <strong>Vento Leste</strong> is available on all streaming platforms. Eight tracks recorded in S&atilde;o Paulo, blending the warmth of Brazilian music with the soul of Romanian tradition.
+                </p>
+                <div class="nl-spotify">
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/artist/1agti7NaIB2OH70QeSy0g2?utm_source=generator&theme=0"
+                        width="100%" height="152" frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <hr class="nl-divider">
+
+            <!-- Two-column feature -->
+            <div class="nl-section">
+                <div class="nl-section-label">Behind the Scenes</div>
+                <h2>Moments from the Road</h2>
+                <div class="nl-two-col">
+                    <div class="nl-feature-card">
+                        <img src="assets/images/V1 sea copy.jpg" alt="Mara by the sea">
+                        <div class="card-body">
+                            <h3>Between Two Seas</h3>
+                            <p>Finding inspiration in the space where water meets the horizon.</p>
+                        </div>
+                    </div>
+                    <div class="nl-feature-card">
+                        <img src="assets/images/Silhouette 1 copy.jpg" alt="Mara silhouette">
+                        <div class="card-body">
+                            <h3>Sound & Silence</h3>
+                            <p>The quiet moments before the music begins.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="nl-divider">
+
+            <!-- Closing -->
+            <div class="nl-section" style="text-align: center;">
+                <p>Thank you for being part of this journey. Every listener, every shared moment at a concert, every message — it all matters deeply.</p>
+                <p style="margin-top: 1rem;">With warmth and music,</p>
+                <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.3rem; color: var(--primary-gold); margin-top: 0.5rem;">Mara</p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="newsletter-footer">
+            <img src="assets/images/mara-halunga-logo-color.png" alt="Mara Halunga" class="footer-logo">
+            <div class="footer-social">
+                <a href="https://open.spotify.com/artist/1agti7NaIB2OH70QeSy0g2" target="_blank">Spotify</a>
+                <a href="https://www.instagram.com/marahalunga" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/@MaraHalunga" target="_blank">YouTube</a>
+                <a href="https://linktr.ee/marahalunga" target="_blank">Linktree</a>
+            </div>
+            <div class="footer-meta">
+                &copy; 2026 Mara Halunga. All rights reserved.<br>
+                <a href="index.html">Visit Website</a> &nbsp;|&nbsp; <a href="#">Unsubscribe</a> &nbsp;|&nbsp; <a href="#">View in Browser</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
