@@ -1,5 +1,31 @@
 // script.js for Mara Halunga website
 
+// Gallery lightbox
+(function () {
+    var overlay = document.createElement('div');
+    overlay.className = 'gallery-lightbox';
+    var lightboxImg = document.createElement('img');
+    overlay.appendChild(lightboxImg);
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', function () {
+        overlay.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') overlay.classList.remove('active');
+    });
+
+    document.querySelectorAll('.gallery-item img').forEach(function (img) {
+        img.addEventListener('click', function () {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            overlay.classList.add('active');
+            if (typeof umami !== 'undefined') umami.track('gallery-photo-view');
+        });
+    });
+})();
+
 (function () {
   // Detect language from the current page filename
   var lang = 'en';
