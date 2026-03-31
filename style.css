@@ -1011,10 +1011,45 @@ footer p {
     border-radius: 8px;
 }
 
-/* Newsletter CTA */
+/* Newsletter form */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    background: var(--dark-bg);
+    border: 1px solid var(--light-dark);
+    color: var(--text-light);
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.newsletter-form input[type="text"]:focus,
+.newsletter-form input[type="email"]:focus {
+    border-color: var(--primary-gold);
+}
+
+.newsletter-form input::placeholder {
+    color: #888;
+}
+
 .newsletter-cta {
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
 }
 
 /* Smooth Animations */
