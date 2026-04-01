@@ -74,15 +74,15 @@ Each HTML file follows the same section order:
 **Design system** (defined as CSS custom properties in `:root`):
 
 ```css
---primary-gold: #d4af37
---secondary-gold: #b8941f
---dark-bg: #0a0a0a        /* page background */
---medium-dark: #1a1a1a    /* card backgrounds */
---light-dark: #2a2a2a     /* borders, dividers */
---text-light: #ffffff
---text-gray: #cccccc
---accent-red: #8b0000
---gradient-gold: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #b8941f 100%)
+--primary-gold: #c69425      /* warm amber gold */
+--secondary-gold: #a87c1e
+--light-bg: #fdf9f2           /* warm ivory page background */
+--card-bg: #f4ede0            /* warm parchment card backgrounds */
+--card-border: #e2d4bc        /* warm tan borders */
+--text-dark: #1c1814          /* deep warm charcoal body text */
+--text-muted: #6b5d4f         /* warm medium brown secondary text */
+--accent-warm: #b85c30        /* terracotta accent (use sparingly) */
+--gradient-gold: linear-gradient(135deg, #c69425 0%, #e8c842 50%, #a87c1e 100%)
 ```
 
 **Typography:**
