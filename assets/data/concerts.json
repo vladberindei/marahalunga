@@ -1,5 +1,12 @@
 [
-  { "name": "Mara Halunga și Cauê de Marinis ", "location": { "en": "Fundatura fericirii, Ploiesti", "pt": "Fundatura fericirii, Ploiesti" }, "date": "2026-03-13", "time": "19:30" },
+  { "name": "TBA", "location": { "en": "Bucharest", "pt": "BUCARESTE" }, "date": "2026-06-21&22" },
+  { "name": "The Jazz Cave Festival", "location": { "en": "Ocnele Mari", "pt": "Ocnele Mari" }, "date": "2026-07-04" },
+  { "name": "Mara Halunga & Cauê de Marinis ", "location": { "en": "Gradina de Lavanda", "pt": "Gradina de Lavanda" }, "date": "2026-06-13", "time": "20:00" },
+  { "name": "Mara Halunga & Cauê de Marinis ", "location": { "en": "Tipografia, Brasov", "pt": "Tipografia, Brasov" }, "date": "2026-05-14", "time": "20:00" },
+  { "name": "Mara Halunga Quintet ", "location": { "en": "Jazz Society Club, Galati", "pt": "Jazz Society Club, Galati" }, "date": "2026-04-24", "time": "20:00", "url": "https://m.iabilet.ro/bilete-galati-mara-halunga-uma-noite-brasileira-124785/?utm_source=TownPage&utm_medium=mobile&utm_campaign=galati&utm_term=" },
+  { "name": "Mara Halunga & Cauê de Marinis ", "location": { "en": "Biergarten, Craiova", "pt": "Biergarten, Craiova" }, "date": "2026-05-17", "time": "18:30" },
+  { "name": "Mara Halunga & Cauê de Marinis ", "location": { "en": "COFFeEAST Festival, Bucharest", "pt": "COFFeEAST Festival, Bucareste" }, "date": "2026-03-22", "time": "14:00" },
+  { "name": "Mara Halunga & Cauê de Marinis ", "location": { "en": "Fundatura fericirii, Ploiesti", "pt": "Fundatura fericirii, Ploiesti" }, "date": "2026-03-13", "time": "19:30" },
   { "name": "Brazilian Music with a Romanian Twist", "location": { "en": "Green Hours, Bucharest", "pt": "Green Hours, Bucareste" }, "date": "2026-03-14", "time": "20:00", "url": "https://www.bilet.ro/en/event/brazilian-music-with-a-romanian-twist-17767" },
   { "name": "FITS", "location": { "en": "Sibiu", "pt": "Sibiu" }, "date": "2025" },
   { "name": "Venetic Live", "location": { "en": "Gherdeal", "pt": "Gherdeal" }, "date": "2025" },
