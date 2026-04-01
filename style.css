@@ -1,4 +1,4 @@
-/* Mara Halunga Website - Modern Warm Light Design */
+/* Mara Halunga Website - Warm Dark Design */
 * {
     margin: 0;
     padding: 0;
@@ -8,11 +8,12 @@
 :root {
     --primary-gold: #c69425;
     --secondary-gold: #a87c1e;
-    --light-bg: #fdf9f2;
-    --card-bg: #f4ede0;
-    --card-border: #e2d4bc;
-    --text-dark: #1c1814;
-    --text-muted: #6b5d4f;
+    --page-bg: #1a1510;
+    --card-bg: #252018;
+    --card-inner: #2e2a1e;
+    --card-border: #3a3020;
+    --text-light: #f0e8d8;
+    --text-muted: #a8987e;
     --accent-warm: #b85c30;
     --gradient-gold: linear-gradient(135deg, #c69425 0%, #e8c842 50%, #a87c1e 100%);
 }
@@ -28,25 +29,24 @@
 
 body {
     font-family: 'Source Sans Pro', Arial, sans-serif;
-    background: var(--light-bg);
-    color: var(--text-dark);
+    background: var(--page-bg);
+    color: var(--text-light);
     line-height: 1.6;
     font-size: 16px;
     overflow-x: hidden;
 }
 
-/* Modern Header with Fixed Navigation */
+/* Header */
 header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(253, 249, 242, 0.96);
+    background: rgba(26, 21, 16, 0.96);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(198, 148, 37, 0.2);
     transition: all 0.3s ease;
-    box-shadow: 0 2px 20px rgba(100, 60, 20, 0.07);
 }
 
 .header-container {
@@ -98,7 +98,7 @@ header {
     background: transparent;
     color: var(--text-muted);
     text-decoration: none;
-    border: 1px solid rgba(198, 148, 37, 0.4);
+    border: 1px solid rgba(198, 148, 37, 0.3);
     border-radius: 25px;
     font-size: 0.9rem;
     font-weight: 500;
@@ -110,7 +110,7 @@ header {
 .lang-btn:hover,
 .lang-btn.active {
     background: var(--gradient-gold);
-    color: #fff;
+    color: var(--page-bg);
     border-color: var(--primary-gold);
     transform: translateY(-2px);
 }
@@ -160,7 +160,7 @@ nav a:hover::after {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: linear-gradient(rgba(20,12,6,0.42), rgba(20,12,6,0.68)), url('assets/images/closed.jpg');
+    background: linear-gradient(rgba(14,9,4,0.48), rgba(14,9,4,0.72)), url('assets/images/closed.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -183,7 +183,7 @@ nav a:hover::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at center, transparent 0%, rgba(20,12,6,0.5) 100%);
+    background: radial-gradient(circle at center, transparent 0%, rgba(14,9,4,0.55) 100%);
 }
 
 .hero-content {
@@ -223,7 +223,7 @@ nav a:hover::after {
 
 .hero-content .subtitle {
     font-size: clamp(1.2rem, 3vw, 1.8rem);
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(240, 232, 216, 0.78);
     margin-bottom: 3rem;
     font-weight: 300;
     line-height: 1.4;
@@ -233,7 +233,7 @@ nav a:hover::after {
     display: inline-block;
     padding: 1rem 2.5rem;
     background: var(--gradient-gold);
-    color: #fff !important;
+    color: var(--page-bg) !important;
     text-decoration: none !important;
     border-radius: 50px;
     font-weight: 700;
@@ -241,15 +241,15 @@ nav a:hover::after {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(198, 148, 37, 0.35);
+    box-shadow: 0 10px 30px rgba(198, 148, 37, 0.25);
     border-bottom: none !important;
     padding-bottom: 1rem !important;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(198, 148, 37, 0.45);
-    color: #fff !important;
+    box-shadow: 0 15px 40px rgba(198, 148, 37, 0.38);
+    color: var(--page-bg) !important;
     border-bottom: none !important;
 }
 
@@ -285,10 +285,11 @@ section h2::after {
     content: '';
     display: block;
     width: 60px;
-    height: 3px;
+    height: 2px;
     background: var(--gradient-gold);
     margin: 0.75rem auto 2.25rem;
     border-radius: 2px;
+    opacity: 0.7;
 }
 
 /* About Section - Split Layout */
@@ -311,7 +312,7 @@ section h2::after {
 }
 
 .about-text strong {
-    color: var(--text-dark);
+    color: var(--text-light);
     font-weight: 600;
 }
 
@@ -319,7 +320,7 @@ section h2::after {
     position: relative;
     overflow: hidden;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(100, 60, 20, 0.15);
+    box-shadow: 0 20px 60px rgba(5, 3, 1, 0.55);
 }
 
 .about-image img {
@@ -358,7 +359,7 @@ section h2::after {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 30px rgba(100, 60, 20, 0.08);
+    box-shadow: 0 8px 40px rgba(5, 3, 1, 0.45);
 }
 
 .album-card::before {
@@ -378,7 +379,8 @@ section h2::after {
 
 .album-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(100, 60, 20, 0.13);
+    border-color: rgba(198, 148, 37, 0.35);
+    box-shadow: 0 20px 60px rgba(5, 3, 1, 0.6), 0 0 40px rgba(198, 148, 37, 0.06);
 }
 
 .album-title {
@@ -447,8 +449,8 @@ section h2::after {
 
 .stream-btn {
     padding: 1rem;
-    background: #fff;
-    color: var(--text-dark);
+    background: var(--card-inner);
+    color: var(--text-light);
     text-decoration: none;
     border-radius: 10px;
     border: 1px solid var(--card-border);
@@ -460,7 +462,7 @@ section h2::after {
 
 .stream-btn:hover {
     background: var(--gradient-gold);
-    color: #fff;
+    color: var(--page-bg);
     border-color: var(--primary-gold);
     transform: translateX(10px);
 }
@@ -485,7 +487,7 @@ section h2::after {
 }
 
 .album-credits strong {
-    color: var(--text-dark);
+    color: var(--text-light);
 }
 
 .album-credits em {
@@ -531,7 +533,7 @@ section h2::after {
 
 .past-concerts-toggle:hover {
     background: var(--primary-gold);
-    color: #fff;
+    color: var(--page-bg);
 }
 
 .concerts-subsection-title {
@@ -561,13 +563,14 @@ section h2::after {
     border-radius: 15px;
     border: 1px solid var(--card-border);
     transition: all 0.3s ease;
-    box-shadow: 0 2px 15px rgba(100, 60, 20, 0.06);
+    box-shadow: 0 4px 20px rgba(5, 3, 1, 0.4);
 }
 
 .performance-card:hover {
     transform: translateY(-5px);
-    background: #fff;
-    box-shadow: 0 15px 35px rgba(100, 60, 20, 0.12);
+    background: var(--card-inner);
+    border-color: rgba(198, 148, 37, 0.3);
+    box-shadow: 0 15px 40px rgba(5, 3, 1, 0.5);
 }
 
 .performance-card h3 {
@@ -600,7 +603,7 @@ section h2::after {
 }
 
 .achievements li:hover {
-    color: var(--text-dark);
+    color: var(--text-light);
     padding-left: 2.5rem;
 }
 
@@ -612,14 +615,14 @@ section h2::after {
 }
 
 .ticket-link:hover {
-    color: var(--secondary-gold);
+    color: #e8c842;
     text-decoration: underline;
 }
 
 /* Booking Section - Call to Action */
 .booking-section {
     background: var(--gradient-gold);
-    color: #fff;
+    color: var(--page-bg);
     padding: 4rem 3rem;
     border-radius: 20px;
     text-align: center;
@@ -665,7 +668,7 @@ section h2::after {
     padding: 4rem;
     border-radius: 20px;
     border: 1px solid var(--card-border);
-    box-shadow: 0 4px 30px rgba(100, 60, 20, 0.08);
+    box-shadow: 0 8px 40px rgba(5, 3, 1, 0.45);
 }
 
 .contact-grid {
@@ -676,18 +679,17 @@ section h2::after {
 }
 
 .contact-card {
-    background: #fff;
+    background: var(--card-inner);
     padding: 2.5rem;
     border-radius: 15px;
     border: 1px solid var(--card-border);
     transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(100, 60, 20, 0.05);
 }
 
 .contact-card:hover {
     transform: translateY(-5px);
-    border-color: var(--primary-gold);
-    box-shadow: 0 10px 30px rgba(100, 60, 20, 0.1);
+    border-color: rgba(198, 148, 37, 0.35);
+    box-shadow: 0 12px 35px rgba(5, 3, 1, 0.5);
 }
 
 .contact-card h3 {
@@ -701,7 +703,7 @@ section h2::after {
     color: var(--text-muted);
     text-decoration: none;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(198, 148, 37, 0.3);
+    border-bottom: 1px solid rgba(198, 148, 37, 0.25);
     padding-bottom: 2px;
 }
 
@@ -718,7 +720,7 @@ section h2::after {
 
 .social-links a {
     padding: 0.8rem;
-    background: var(--light-bg);
+    background: var(--card-bg);
     border-radius: 8px;
     transition: all 0.3s ease;
     text-align: center;
@@ -728,14 +730,14 @@ section h2::after {
 
 .social-links a:hover {
     background: var(--gradient-gold);
-    color: #fff;
+    color: var(--page-bg);
     border-color: var(--primary-gold);
     transform: translateX(5px);
 }
 
 /* Footer */
 footer {
-    background: var(--light-bg);
+    background: var(--card-bg);
     padding: 3rem 0;
     text-align: center;
     border-top: 1px solid var(--card-border);
@@ -1023,7 +1025,7 @@ footer p {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(20, 12, 6, 0.93);
+    background: rgba(10, 6, 2, 0.95);
     z-index: 2000;
     justify-content: center;
     align-items: center;
@@ -1051,9 +1053,9 @@ footer p {
 
 .newsletter-form input[type="text"],
 .newsletter-form input[type="email"] {
-    background: var(--light-bg);
+    background: var(--card-bg);
     border: 1px solid var(--card-border);
-    color: var(--text-dark);
+    color: var(--text-light);
     padding: 0.65rem 1rem;
     font-size: 0.95rem;
     font-family: 'Source Sans Pro', Arial, sans-serif;
@@ -1070,7 +1072,7 @@ footer p {
 }
 
 .newsletter-form input::placeholder {
-    color: #aaa;
+    color: #6b5d4f;
 }
 
 .newsletter-cta {

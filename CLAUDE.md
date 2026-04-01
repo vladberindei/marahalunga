@@ -76,11 +76,12 @@ Each HTML file follows the same section order:
 ```css
 --primary-gold: #c69425      /* warm amber gold */
 --secondary-gold: #a87c1e
---light-bg: #fdf9f2           /* warm ivory page background */
---card-bg: #f4ede0            /* warm parchment card backgrounds */
---card-border: #e2d4bc        /* warm tan borders */
---text-dark: #1c1814          /* deep warm charcoal body text */
---text-muted: #6b5d4f         /* warm medium brown secondary text */
+--page-bg: #1a1510            /* very dark warm brown page background */
+--card-bg: #252018            /* dark warm brown card backgrounds */
+--card-inner: #2e2a1e         /* inner/nested card backgrounds */
+--card-border: #3a3020        /* warm dark tan borders */
+--text-light: #f0e8d8         /* warm off-white body text */
+--text-muted: #a8987e         /* warm muted tan secondary text */
 --accent-warm: #b85c30        /* terracotta accent (use sparingly) */
 --gradient-gold: linear-gradient(135deg, #c69425 0%, #e8c842 50%, #a87c1e 100%)
 ```
