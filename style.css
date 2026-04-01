@@ -166,6 +166,15 @@ nav a:hover::after {
     text-align: center;
 }
 
+/* iOS Safari does not support background-attachment: fixed — it causes
+   the image to appear heavily cropped/zoomed. Force scroll on all touch
+   devices (covers iPhone, iPad, Android). */
+@media (hover: none) and (pointer: coarse) {
+    .hero {
+        background-attachment: scroll;
+    }
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -497,7 +506,8 @@ section h2 {
 }
 
 .past-concerts-toggle::after {
-    content: '▼';
+    /* U+FE0E text variation selector prevents iOS from rendering ▼ as an emoji */
+    content: '\25BC\FE0E';
     font-size: 0.7rem;
     transition: transform 0.25s;
 }
@@ -567,7 +577,8 @@ section h2 {
 }
 
 .achievements li::before {
-    content: '▶';
+    /* U+FE0E text variation selector prevents iOS from rendering ▶ as an emoji */
+    content: '\25B6\FE0E';
     position: absolute;
     left: 0;
     color: var(--primary-gold);
