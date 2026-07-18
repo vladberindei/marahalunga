@@ -19,11 +19,11 @@
             <nav>
                 <ul>
                     <li><a href="#home" data-umami-event="nav-home">Home</a></li>
-                    <li><a href="#about" data-umami-event="nav-about">About</a></li>
+                    <li><a href="#concerts" data-umami-event="nav-concerts">Concerts</a></li>
                     <li><a href="#music" data-umami-event="nav-music">Music</a></li>
                     <li><a href="#gallery" data-umami-event="nav-gallery">Gallery</a></li>
-                    <li><a href="#concerts" data-umami-event="nav-concerts">Concerts</a></li>
                     <li><a href="#contact" data-umami-event="nav-contact">Contact</a></li>
+                    <li><a href="#about" data-umami-event="nav-about">About</a></li>
                 </ul>
             </nav>
             <div class="language-selector">
@@ -37,22 +37,15 @@
         <section class="hero" id="home">
             <div class="hero-content">
                 <h1><img src="assets/images/mara-halunga-logo-color.png" alt="Mara Halunga" class="hero-logo"></h1>
-                <p class="subtitle">Singer and songwriter creating Brazilian music with a Romanian twist</p>
                 <a href="#music" class="cta-button" data-umami-event="hero-cta">Discover Music</a>
             </div>
         </section>
 
-        <section id="about">
-            <div class="about-text">
-                <h2>About</h2>
-                <p><strong>Mara Halunga</strong> is a singer and songwriter who travels between Romania and Brazil, drawing inspiration from both cultures to create her music. Her musical project arises from the fusion of Brazilian music, jazz, world music, and Romanian tradition, resulting in an original and diverse sound deeply connected to the idea of music as a language of encounter.</p>
+        <section id="concerts">
+            <h2>Concerts</h2>
 
-                <p>On stage, Mara has performed at festivals and on tours across Romania, Italy, Sweden, and Brazil (São Paulo), earning recognition for the intensity of her performances and the uniqueness of her artistic vision. Two major tours have marked her journey in Romania: <strong>"Mara and Cauê play Elis & Tom"</strong> (2024) and <strong>"Vento Leste"</strong> (2025) — the latter presenting her first original album.</p>
-
-                <p>Over the past seven years, she has performed hundreds of concerts, shaping a distinctive and steadily growing artistic trajectory. The Vento Leste Tour, held during the European summer of 2025, was a milestone, bringing together diverse audiences and confirming the album's power in its live form. The album's release concert was recorded and broadcast nationwide by <strong>TVR Cultural</strong>, representing a significant moment of national recognition.</p>
-            </div>
-            <div class="about-image">
-                <img src="assets/images/Portrait 1 copy.jpg" alt="Mara Halunga">
+            <div id="concerts-data">
+                <!-- Loaded from assets/data/concerts.json by script.js -->
             </div>
         </section>
 
@@ -62,7 +55,7 @@
             <div class="album-card">
                 <h3 class="album-title">Vento Leste</h3>
                 <p><em>Debut Album • Recorded in São Paulo • Produced by Bruno Dos Reis</em></p>
-                <p><strong>"Vento Leste"</strong> was conceived as a deeply personal musical journey — a collection of compositions that breathe between the delicacy of Brazilian music, the freedom of jazz, and the vibrant colors of Romanian sounds. Lyrics in Portuguese and Romanian intertwine, creating poetic bridges and a repertoire that speaks of encounters, movement, and inner landscapes.</p>
+                <p><strong>"Vento Leste"</strong> is out now</p>
 
                 <div class="spotify-embed">
                     <iframe style="border-radius:12px"
@@ -93,12 +86,6 @@
                     </div>
                 </div>
 
-                <div class="album-credits">
-                    <h4>Musicians</h4>
-                    <p><strong>Cauê de Marinis</strong> (guitar, bass) • <strong>Daniel Grajew</strong> (piano, accordion) • <strong>Fábio Sá</strong> (bass, double bass) • <strong>Ari Colares</strong> (percussion) • <strong>Guilherme Tófano</strong> (drums)</p>
-                    <p><em>Special guests: Adriana Holtz, Diego Coelho, Raphael Coelho, Thomas Harres</em></p>
-                    <p>Compositions co-created by <strong>Mara Halunga</strong> and <strong>Cauê De Marinis</strong>, with <strong>Will Weber</strong> contributing to the lyrics.</p>
-                </div>
             </div>
         </section>
 
@@ -114,61 +101,36 @@
             </div>
         </section>
 
-        <section id="concerts">
-            <h2>Concerts</h2>
+        <section id="contact">
+            <h2>Get in touch</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Booking</h3>
+                    <p><a href="mailto:booking@marahalunga.com" data-umami-event="contact-booking-email">booking@marahalunga.com</a></p>
+                </div>
 
-            <div id="concerts-data">
-                <!-- Loaded from assets/data/concerts.json by script.js -->
-            </div>
-
-            <div class="booking-section">
-                <h3>Book Mara Halunga</h3>
-                <p>Available for concerts, festivals, private events, and cultural exchanges</p>
-                <p><strong>Performance Types:</strong> Duo acoustic sets • Full band performances • Jazz ensemble • Cultural events</p>
+                <div class="contact-card">
+                    <h3>General Enquiries</h3>
+                    <p><a href="mailto:contact@marahalunga.com" data-umami-event="contact-booking-email">contact@marahalunga.com</a></p>
+                </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact & Booking</h2>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <h3>Professional Inquiries</h3>
-                    <p><strong>Bookings & Management:</strong><br>
-                    <a href="mailto:contact@marahalunga.com" data-umami-event="contact-booking-email">contact@marahalunga.com</a></p>
-                </div>
+        <section id="about">
+            <div class="about-text">
+                <h2>About</h2>
+                <p><strong>Mara Halunga</strong> is a singer and songwriter who travels between Romania and Brazil, drawing inspiration from both cultures to create her music. Her musical project arises from the fusion of Brazilian music, jazz, world music, and Romanian tradition, resulting in an original and diverse sound deeply connected to the idea of music as a language of encounter.</p>
 
-                <div class="contact-card">
-                    <h3>Follow Mara</h3>
-                    <div class="social-links">
-                        <a href="https://open.spotify.com/artist/1agti7NaIB2OH70QeSy0g2" target="_blank" data-umami-event="social-spotify">Spotify</a>
-                        <a href="https://www.instagram.com/marahalunga" target="_blank" data-umami-event="social-instagram">Instagram</a>
-                        <a href="https://www.youtube.com/@MaraHalunga" target="_blank" data-umami-event="social-youtube">YouTube</a>
-                        <a href="https://linktr.ee/marahalunga" target="_blank" data-umami-event="social-linktree">Linktree</a>
-                    </div>
-                </div>
+                <p>On stage, Mara has performed at festivals and on tours across Romania, Italy, Sweden, and Brazil (São Paulo), earning recognition for the intensity of her performances and the uniqueness of her artistic vision. Two major tours have marked her journey in Romania: <strong>"Mara and Cauê play Elis & Tom"</strong> (2024) and <strong>"Vento Leste"</strong> (2025) — the latter presenting her first original album.</p>
 
-                <div class="contact-card">
-                    <h3>Press Kit</h3>
-                    <p>Professional materials and technical requirements available upon request.</p>
-                    <a href="assets/docs/EPK_Mara_Halunga_EN_26.pdf" target="_blank" class="cta-button" style="display: block; margin: 1rem auto 0; text-align: center;" data-umami-event="download-epk">Download EPK</a>
-                </div>
-
-                <div class="contact-card newsletter-card">
-                    <h3>Stay Updated</h3>
-                    <p>Get notified about new music, concerts, and tours.</p>
-                    <form action="https://gmail.us7.list-manage.com/subscribe/post?u=f34cf4fa9a6898b5540cd1497&amp;id=ec1f34f03c&amp;f_id=00b8cae4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter-form" target="_blank">
-                        <input type="text" name="FNAME" id="mce-FNAME" placeholder="First name">
-                        <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Email address" required>
-                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                            <input type="text" name="b_f34cf4fa9a6898b5540cd1497_ec1f34f03c" tabindex="-1" value="">
-                        </div>
-                        <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="cta-button newsletter-cta" data-umami-event="newsletter-signup">Subscribe</button>
-                    </form>
-                </div>
+                <p>Over the past seven years, she has performed hundreds of concerts, shaping a distinctive and steadily growing artistic trajectory. The Vento Leste Tour, held during the European summer of 2025, was a milestone, bringing together diverse audiences and confirming the album's power in its live form. The album's release concert was recorded and broadcast nationwide by <strong>TVR Cultural</strong>, representing a significant moment of national recognition.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/images/Portrait 1 copy.jpg" alt="Mara Halunga">
             </div>
         </section>
     </main>
-    
+
     <footer>
         <p><img src="assets/images/mara-halunga-logo-color.png" alt="Mara Halunga logo" class="footer-logo">&copy; 2025 Mara Halunga. All rights reserved.</p>
     </footer>
