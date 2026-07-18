@@ -62,7 +62,7 @@ Each HTML file follows the same section order:
 2. **`#home`** — Hero section: full-screen background, logo image, subtitle, CTA button
 3. **`#about`** — Biography text + portrait image (`.about-text` / `.about-image`)
 4. **`#music`** — Album card for "Vento Leste" with Spotify embed, YouTube video, streaming links, musician credits
-5. **`#gallery`** — Photo gallery grid (6 images) with click-to-enlarge lightbox
+5. **`#gallery`** — Photo gallery grid (13 images) with click-to-enlarge lightbox
 6. **`#concerts`** — Dynamically loaded from `concerts.json`; split into upcoming and past subsections
 7. **`#contact`** — Four contact cards: bookings email, social links, EPK download, newsletter signup
 8. **`<footer>`** — Copyright with colored logo
@@ -143,6 +143,13 @@ Two parallel HTML files share the same `style.css` and `script.js`. When updatin
 | `assets/images/mara-live-purple-light.jpg` | Gallery photo (live, purple stage lights) |
 | `assets/images/mara-live-black-dress.jpg` | Gallery photo (live, black dress) |
 | `assets/images/mara-live-outdoor-band.jpg` | Gallery photo (live, outdoor with band) |
+| `assets/images/mara-live-orchestra-hall.jpg` | Gallery photo (live, concert hall) |
+| `assets/images/mara-live-sequin-dress.jpg` | Gallery photo (live, sequin dress) |
+| `assets/images/mara-studio-recording.jpg` | Gallery photo (recording studio) |
+| `assets/images/mara-live-festival-stage.jpg` | Gallery photo (live, festival stage) |
+| `assets/images/mara-live-green-smoke.jpg` | Gallery photo (live, green stage lights) |
+| `assets/images/mara-live-blue-light-tambourine.jpg` | Gallery photo (live, tambourine, blue lights) |
+| `assets/images/mara-live-festival-crowd.jpg` | Gallery photo (live, festival crowd) |
 | `assets/docs/EPK_Mara_Halunga_EN_26.pdf` | Electronic Press Kit (19.4 MB) |
 
 Do **not** commit new large images without running the optimizer first (see below).
