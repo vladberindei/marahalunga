@@ -137,12 +137,12 @@ Two parallel HTML files share the same `style.css` and `script.js`. When updatin
 | `assets/images/Portrait 1 copy.jpg` | Artist portrait (About section) |
 | `assets/images/closed.jpg` | Hero background image |
 | `assets/fonts/DanhDa-Bold.otf` | Custom display font |
-| `assets/images/Portrait 2 copy.jpg` | Gallery photo (portrait) |
-| `assets/images/V1 sea copy.jpg` | Gallery photo (by the sea) |
-| `assets/images/Silhouette 1 copy.jpg` | Gallery photo (silhouette) |
-| `assets/images/V3.jpg` | Gallery photo |
-| `assets/images/V1 sepia 36.jpg` | Gallery photo (sepia) |
-| `assets/images/mara_banner_2.jpg` | Gallery photo (banner) |
+| `assets/images/mara-portrait-studio-bw.jpg` | Gallery photo (studio portrait, black & white) |
+| `assets/images/mara-portrait-smiling.jpg` | Gallery photo (smiling portrait) |
+| `assets/images/mara-silhouette.jpg` | Gallery photo (silhouette) |
+| `assets/images/mara-live-purple-light.jpg` | Gallery photo (live, purple stage lights) |
+| `assets/images/mara-live-black-dress.jpg` | Gallery photo (live, black dress) |
+| `assets/images/mara-live-outdoor-band.jpg` | Gallery photo (live, outdoor with band) |
 | `assets/docs/EPK_Mara_Halunga_EN_26.pdf` | Electronic Press Kit (19.4 MB) |
 
 Do **not** commit new large images without running the optimizer first (see below).
