@@ -62,7 +62,7 @@ Each HTML file follows the same section order:
 2. **`#home`** — Hero section: full-screen background, logo image, subtitle, CTA button
 3. **`#about`** — Biography text + portrait image (`.about-text` / `.about-image`)
 4. **`#music`** — Album card for "Vento Leste" with Spotify embed, YouTube video, streaming links, musician credits
-5. **`#gallery`** — Photo gallery grid (13 images) with click-to-enlarge lightbox
+5. **`#gallery`** — Photo gallery grid (12 images) with click-to-enlarge lightbox
 6. **`#concerts`** — Dynamically loaded from `concerts.json`; split into upcoming and past subsections
 7. **`#contact`** — Four contact cards: bookings email, social links, EPK download, newsletter signup
 8. **`<footer>`** — Copyright with colored logo
@@ -134,10 +134,9 @@ Two parallel HTML files share the same `style.css` and `script.js`. When updatin
 | File | Purpose |
 |---|---|
 | `assets/images/mara-halunga-logo-color.png` | Primary color logo (header + footer + hero) |
-| `assets/images/Portrait 1 copy.jpg` | Artist portrait (About section) |
+| `assets/images/mara-portrait-studio-bw.jpg` | Artist portrait (About section) |
 | `assets/images/closed.jpg` | Hero background image |
 | `assets/fonts/DanhDa-Bold.otf` | Custom display font |
-| `assets/images/mara-portrait-studio-bw.jpg` | Gallery photo (studio portrait, black & white) |
 | `assets/images/mara-portrait-smiling.jpg` | Gallery photo (smiling portrait) |
 | `assets/images/mara-silhouette.jpg` | Gallery photo (silhouette) |
 | `assets/images/mara-live-purple-light.jpg` | Gallery photo (live, purple stage lights) |
