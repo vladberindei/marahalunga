@@ -59,7 +59,7 @@ No npm, no bundler, no transpiler, no framework, no linter config.
 Each HTML file follows the same section order:
 
 1. **`<header>`** — Fixed navigation, logo, language switcher (EN/PT)
-2. **`#home`** — Hero section: full-screen background, logo image, subtitle, CTA button
+2. **`#home`** — Hero section: full-screen background, logo image
 3. **`#about`** — Biography text + portrait image (`.about-text` / `.about-image`)
 4. **`#music`** — Album card for "Vento Leste" with Spotify embed, YouTube video, streaming links, musician credits
 5. **`#gallery`** — Photo gallery grid (12 images) with click-to-enlarge lightbox
@@ -260,7 +260,6 @@ Page views are tracked automatically. Custom click events use `data-umami-event`
 |---|---|
 | `nav-home`, `nav-about`, `nav-music`, `nav-concerts`, `nav-contact` | Navigation links |
 | `lang-switch-en`, `lang-switch-pt` | Language switcher buttons |
-| `hero-cta` | Hero "Discover Music" CTA button |
 | `stream-spotify`, `stream-youtube`, `stream-all-platforms` | Music section streaming buttons |
 | `social-spotify`, `social-instagram`, `social-youtube`, `social-linktree` | Contact section social links |
 | `contact-booking-email` | Booking email link |
