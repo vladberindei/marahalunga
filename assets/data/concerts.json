@@ -1,6 +1,7 @@
 [
+  { "name": "Vert", "location": { "en": "Iași", "pt": "Iași" }, "date": "2026-09-09", "url": "https://www.ambilet.ro/bilete/concert-la-vert-mara-halunga-4795" },
   { "name": "Kaleidoscope", "location": { "en": "Brașov", "pt": "Brașov" }, "date": "2026-08-29" },
-  { "name": "Teatrul Natiei", "location": { "en": "Ploiesti", "pt": "Ploiesti" }, "date": "2026-10-18" },
+  { "name": "Teatrul Natiei", "location": { "en": "Ploiesti", "pt": "Ploiesti" }, "date": "2026-10-18", "url": "https://www.iabilet.ro/bilete-ploiesti-concert-mara-halunga-130063/" },
   { "name": "Bistrița", "location": { "en": "Bistrița", "pt": "Bistrița" }, "date": "2026-08-30" },
   { "name": "RoLand Jazz Fest", "location": { "en": "Sangeorz Bai", "pt": "Sangeorz Bai" }, "date": "2026-08-07" },
   { "name": "The Magic of Latin Jazz with the Romanian Big Band", "location": { "en": "Bucharest", "pt": "Bucharest" }, "date": "2026-01-22" },
