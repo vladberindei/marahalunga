@@ -149,7 +149,7 @@ Two parallel HTML files share the same `style.css` and `script.js`. When updatin
 | `assets/images/mara-live-green-smoke.jpg` | Gallery photo (live, green stage lights) |
 | `assets/images/mara-live-blue-light-tambourine.jpg` | Gallery photo (live, tambourine, blue lights) |
 | `assets/images/mara-live-festival-crowd.jpg` | Gallery photo (live, festival crowd) |
-| `assets/docs/EPK_Mara_Halunga_EN_26.pdf` | Electronic Press Kit (19.4 MB) |
+| `assets/docs/EPK_Mara_Halunga_EN_26.pdf` | Electronic Press Kit (7.7 MB) |
 
 Do **not** commit new large images without running the optimizer first (see below).
 
