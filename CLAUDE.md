@@ -30,6 +30,8 @@ marahalunga/
 │   ├── fonts/          # DanhDa-Bold.otf (custom logo font)
 │   └── data/
 │       └── concerts.json  # Concert data (upcoming + past)
+├── email/
+│   └── newsletter-template.html  # Mailchimp campaign template (not part of the deployed site)
 └── scripts/
     └── optimize_images.py  # Image optimization utility (Python/Pillow)
 ```
@@ -171,6 +173,18 @@ The script:
 - Prints before/after sizes
 
 Requires: `pip install Pillow`
+
+---
+
+## Newsletter Email Template (`email/newsletter-template.html`)
+
+Standalone HTML email template for Mailchimp campaigns, matching the site's dark/gold branding. **Not served by GitHub Pages** — it's an import artifact, not a site page.
+
+- Table-based layout with inline styles (required for Outlook/Gmail/Apple Mail compatibility — no flexbox/grid)
+- Uses Mailchimp merge tags: `*|IF:FNAME|*...*|ELSE:|*...*|END:IF|*` for the name greeting, `*|UNSUB|*` for the required unsubscribe link
+- Sections marked "EDIT PER SEND" (announcement text, CTA link, upcoming-shows rows) should be updated by hand before each campaign — the shows list is static, not wired to `assets/data/concerts.json`
+- To send: in Mailchimp, create a campaign → **Code your own → Paste in code** → paste this file's contents → edit the per-send sections → test send → send
+- Mailchimp auto-appends its own required mailing-address compliance footer at send time regardless of what's in this template (CAN-SPAM requirement, enforced platform-side)
 
 ---
 
