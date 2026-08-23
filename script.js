@@ -2,26 +2,69 @@
 
 // Gallery lightbox
 (function () {
+    var images = Array.prototype.slice.call(document.querySelectorAll('.gallery-item img'));
+    var currentIndex = 0;
+
     var overlay = document.createElement('div');
     overlay.className = 'gallery-lightbox';
     var lightboxImg = document.createElement('img');
     overlay.appendChild(lightboxImg);
+
+    var prevBtn = document.createElement('button');
+    prevBtn.className = 'lightbox-nav lightbox-prev';
+    prevBtn.setAttribute('aria-label', 'Previous photo');
+    prevBtn.innerHTML = '&#10094;';
+    overlay.appendChild(prevBtn);
+
+    var nextBtn = document.createElement('button');
+    nextBtn.className = 'lightbox-nav lightbox-next';
+    nextBtn.setAttribute('aria-label', 'Next photo');
+    nextBtn.innerHTML = '&#10095;';
+    overlay.appendChild(nextBtn);
+
     document.body.appendChild(overlay);
+
+    function showPhoto(index) {
+        currentIndex = (index + images.length) % images.length;
+        var img = images[currentIndex];
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+    }
+
+    function openLightbox(index) {
+        showPhoto(index);
+        overlay.classList.add('active');
+        if (typeof umami !== 'undefined') umami.track('gallery-photo-view');
+    }
 
     overlay.addEventListener('click', function () {
         overlay.classList.remove('active');
     });
 
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') overlay.classList.remove('active');
+    lightboxImg.addEventListener('click', function (e) {
+        e.stopPropagation();
     });
 
-    document.querySelectorAll('.gallery-item img').forEach(function (img) {
+    prevBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        showPhoto(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        showPhoto(currentIndex + 1);
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (!overlay.classList.contains('active')) return;
+        if (e.key === 'Escape') overlay.classList.remove('active');
+        if (e.key === 'ArrowLeft') showPhoto(currentIndex - 1);
+        if (e.key === 'ArrowRight') showPhoto(currentIndex + 1);
+    });
+
+    images.forEach(function (img, index) {
         img.addEventListener('click', function () {
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            overlay.classList.add('active');
-            if (typeof umami !== 'undefined') umami.track('gallery-photo-view');
+            openLightbox(index);
         });
     });
 })();
