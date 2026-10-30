@@ -1,4 +1,7 @@
 [
+  { "name": "Jazz Society Club", "location": { "en": "Galati", "pt": "Galati" }, "date": "2027-04-02" },
+  { "name": "Radio Hall", "location": { "en": "Bucharest", "pt": "Bucareste" }, "date": "2027-01-21" },
+  { "name": "Carnaval SPP 5.0, Quantic Club", "location": { "en": "Bucharest", "pt": "Bucareste" }, "date": "2026-10-31", "url": "https://www.entertix.ro/bilete/40478/carnalval-spp-5-0-31-octombrie-2026-quantic-club-bucuresti.html" },
   { "name": "Conacul Marghiloman,Vila Albatros", "location": { "en": "Buzău", "pt": "Buzău" }, "date": "2026-11-08", "url": "https://www.iabilet.ro/bilete-buzau-seri-de-muzica-la-conac-mara-halunga-133333/" },
   { "name": "Vert", "location": { "en": "Iași", "pt": "Iași" }, "date": "2026-09-09", "url": "https://www.ambilet.ro/bilete/concert-la-vert-mara-halunga-4795" },
   { "name": "Kaleidoscope", "location": { "en": "Brașov", "pt": "Brașov" }, "date": "2026-08-29" },
